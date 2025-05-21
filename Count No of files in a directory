@@ -1,0 +1,4 @@
+a="/tmp/"
+cd $a
+b=`find . -type f | wc -l `
+echo "no of files in the directory are: $b"
