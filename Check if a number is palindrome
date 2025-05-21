@@ -1,0 +1,8 @@
+read -p "enter a string" s
+r=$(echo $s|rev)
+if [ $s = $r ]
+then
+echo "palindrome\n"
+else
+echo "not palindrome\n"
+fi
