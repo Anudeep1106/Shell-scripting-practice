@@ -1,0 +1,10 @@
+read -p "Enter the script filename: " file
+read -p "Enter the word to search: " word
+
+if [ ! -f "$file" ]; then
+    echo "File does not exist."
+    exit 1
+fi
+
+count=$(grep -o "\<$word\>" "$file" | wc -l)
+echo "The word '$word' occurs $count times in $file."
