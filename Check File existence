@@ -1,0 +1,8 @@
+read -p  "enter a file name" f
+
+if [ -a $f ]
+then
+echo "file exists"
+else
+echo "file doesnt exists"
+fi
