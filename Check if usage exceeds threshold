@@ -1,0 +1,12 @@
+# Set the usage threshold (in %)
+THRESHOLD=90
+
+# Get disk usage of root (/) partition
+USAGE=$(df / | awk 'NR==2 {gsub("%",""); print $5}')
+
+# Check if usage exceeds threshold
+if [ "$USAGE" -gt "$THRESHOLD" ]; then
+    echo "ALERT: Disk usage is above ${THRESHOLD}% (Currently: ${USAGE}%)"
+else
+    echo "Disk usage is normal (${USAGE}%)"
+fi
