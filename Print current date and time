@@ -1,0 +1,7 @@
+a=`date +"%d%m%Y"`
+
+echo "current date is: $a"
+
+b=`date +"%H%M%S"`
+
+echo "current time is: $b"
