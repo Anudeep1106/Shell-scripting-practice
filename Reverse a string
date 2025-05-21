@@ -1,0 +1,3 @@
+read -p "enter a string" s
+r=$(echo $s|rev)
+echo "reversed string is: $r\n"
